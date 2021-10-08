@@ -229,5 +229,5 @@ output "ec2_instance_ip" {
 }
 
 output "ec2_instance_ssh" {
-  value = "ssh -i ${local.ec2_username}@${aws_instance.openvpn_instance.public_ip}"
+  value = "ssh -i ${local.ssh_private_key_path} ${local.ec2_username}@${aws_instance.openvpn_instance.public_ip}"
 }
